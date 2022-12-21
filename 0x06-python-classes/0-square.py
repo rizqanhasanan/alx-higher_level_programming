@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+""" Define an empty class """
+
+
+
 class Square:
-    """Class of the square"""
-    def __init__(self):
-        pass
+    """Class Square defined """
+    pass
