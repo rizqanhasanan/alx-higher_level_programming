@@ -1,0 +1,48 @@
+the ``print_square`` function
+===============================
+using ``print_square``
+----------------------
+import function:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+some tests:
+
+    zero:
+    >>> print_square(0)
+     
+    >>> print_square(-5)
+    Traceback (most recent call last):
+     ...
+    ValueError: size must be >= 0
+
+    >>> print_square(-0.4)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square('s')
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square(6.0)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+
+    >>> print_square("Sam")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square("")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+    >>> print_square(6BKND)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
+
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'

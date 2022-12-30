@@ -1,0 +1,71 @@
+the ``matrix_divided`` function
+===============================
+using ``matrix_divided``
+----------------------
+import function:
+    >>> matrix_divided = 
+__import__('2-
+matrix_divided').matrix_divided
+
+some tests:
+
+    matrix = list of list of ints, 
+div = int
+    div is 0
+
+    >>> matrix_divided([[2, 4], [4, 2]], 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+
+    >>> matrix_divided("foo", 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([[2, 4], [4, 2]], 2)
+    [[1.0, 2.0], [2.0, 1.0]]
+
+    >>> matrix_divided([[1, 2], ["two", 1]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided([[1, 2], "list"], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    matrix = list of list of floats, div = int
+    >>> matrix_divided([[2.0, 4.0], [4.0, 2.0]], 2)
+    [[1.0, 2.0], [2.0, 1.0]]
+
+    matrix = list of list of floats (6 sigfig), div = int
+    >>> matrix_divided([[2.000000, 4.0000000], [4.000000, 2.000000]], 2)
+    [[1.0, 2.0], [2.0, 1.0]]
+
+
+    >>> matrix_divided([[2, 4], [4, 2]], "two")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+    
+    >>> matrix_divided([[]], 2)
+    [[]]
+
+    >>> matrix_divided([[1, 2], [3, 4]], 3)
+    [[0.33, 0.67], [1.0, 1.33]]
+
+    >>> matrix_divided([[1, 2], [1]], 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
+
+    >>> matrix_divided(6BKND)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
+
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+

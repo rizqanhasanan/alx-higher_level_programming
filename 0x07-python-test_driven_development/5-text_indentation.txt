@@ -1,0 +1,42 @@
+the ``text_indentation`` function
+==================================
+using ``text_indentation``
+--------------------------
+import function:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+some tests:
+
+    >>> text_indentation("Samir:Millan.")
+    Samir:
+    <BLANKLINE>
+    Millan.
+    <BLANKLINE>
+
+    >>> text_indentation("Samir")
+    Samir
+
+    >>> text_indentation(666)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(-20)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation("Samir", "Millan")
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> text_indentation(""")
+    Traceback (most recent call last):
+    SyntaxError: EOF while scanning triple-quoted string literal
+
+    >>> text_indentation(Samir Millan)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
