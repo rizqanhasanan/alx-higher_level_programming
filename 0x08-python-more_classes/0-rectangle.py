@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-"""Create rectangle"""
+# 0-rectangle.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
-    pass
+        """Re
+        present a rectangle."""
+            pass
+
